@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<conio.h>
+int arm(int a);
+int main()
+{
+    int a,ar;
+    printf("enter the number a:\n");
+    scanf("%d",&a);
+    ar=arm(a);
+}
+int arm(int a)
+{
+    int temp,x,y=0;
+    temp=a;
+    if(a<=1000)
+    {
+    while (a>0)
+    {
+     x=a%10;
+     y=y+(x*x*x);
+     a=a/10;
+    }
+    a=temp;
+if(a==y)
+{
+    printf("the number is armstrong");
+}
+else
+{
+    printf("the number is not armstrong");
+}  
+}
+else
+{
+    printf("plz input small number");
+}
+}
